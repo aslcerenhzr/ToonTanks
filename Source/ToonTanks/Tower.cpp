@@ -21,6 +21,12 @@ void ATower::Tick(float DeltaTime)
     }  
 }
 
+void ATower::HandleDestruction()
+{
+    Super::HandleDestruction();
+    Destroy();
+}
+
 void ATower::BeginPlay()
 {
     Super::BeginPlay();
@@ -32,14 +38,13 @@ void ATower::BeginPlay()
 
 void ATower::CheckFireCondition()
 {
-     if (Tank)
+    if (Tank)
     {
         float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
 
         if (Distance <= FireRange)
         {
             Fire();
-        }
-        
+        } 
     }  
 }
