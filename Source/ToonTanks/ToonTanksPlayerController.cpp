@@ -2,9 +2,9 @@
 
 
 #include "ToonTanksPlayerController.h"
-#include " GameFramework/Pawn.h"
+#include "GameFramework/Pawn.h"
 
-void ToonTanksPlayerController::SetPlayerEnabledState(bool bPlayerEnabled)
+void AToonTanksPlayerController::SetPlayerEnabledState(bool bPlayerEnabled)
 {
     if(bPlayerEnabled)
     {
