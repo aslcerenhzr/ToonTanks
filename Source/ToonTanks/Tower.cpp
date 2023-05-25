@@ -38,7 +38,7 @@ void ATower::BeginPlay()
 
 void ATower::CheckFireCondition()
 {
-    if (Tank)
+    if (Tank && Tank->bAlive)
     {
         float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
 
